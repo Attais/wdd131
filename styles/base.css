@@ -1,0 +1,15 @@
+/* Primary - Deep Blue #2C3E50
+Secondary - Bright Teal - #1ABC9C
+Accent - Coral - #E74C3C
+Background - Light Gray - #ECF0F1
+Text - Dark Gray - #34495E */
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+h1 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+}
