@@ -44,7 +44,7 @@ nav ul {
 }
 
 nav a {
-    display: blcok;
+    display: block;
     color: var(--nav-link-color);
     text-align: center;
     padding: 1rem;
