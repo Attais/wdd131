@@ -67,6 +67,32 @@ h1 {
     color: var(--accent1-color)
 }
 
+h2 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    background-color: var(--primary-color);
+    color: var(--accent1-color)
+}
+
 .card {
+    /* display: grid; */
+}
+
+.cardholder {
     display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    width: 100%;
+    row-gap: 1rem;
+    column-gap: 1rem;
+}
+
+#aboutme {
+    display: grid;
+    grid-column: span 2/ span 2;
+}
+
+footer {
+    display:grid;
+    justify-content: center;
+    align-content: center;
 }
