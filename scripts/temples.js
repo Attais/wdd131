@@ -6,3 +6,15 @@ document.getElementById('currentYear').textContent = currentYear;
 const lastModified = document.lastModified;
 document.getElementById('lastModified').textContent = lastModified;
 
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".navigation");
+
+hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+})
+
+document.querySelectorAll(".navigation").forEach(n => n.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+}))

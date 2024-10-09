@@ -35,6 +35,10 @@ nav {
     display: flex;
     max-width: 800px;
     margin: 0 auto;
+    min-height: 70px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
 }
 
 nav ul {
@@ -55,6 +59,67 @@ nav a:hover {
     text-decoration: overline double;
 }
 
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.nav-branding {
+    font-size: 2rem;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+@media(max-width:768px) {
+    .hamburger {
+        display: block;;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity:0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .navigation{
+        position:fixed;
+        left: -100%;
+        top:70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: var(--secondary-color);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-item{
+        margin: 16px 0;
+    }
+
+    .navigation.active{
+        left: 0;
+    }
+}
+
 body {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
@@ -62,20 +127,65 @@ body {
 
 h1 {
     font-family: "Roboto", sans-serif;
-    font-weight: 100;
+    font-weight: 400;
     background-color: var(--primary-color);
-    color: var(--accent1-color)
+    color: white;
 }
 
-.navigation {
-    
-}
+/* Hamburger icon styles
+.hamburger {
+    display: none; /* Hidden by default */
+    /* flex-direction: column;
+    cursor: pointer; */
+/* }
+
+.hamburger span {
+    width: 30px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin: 5px 0;
+    transition: all 0.3s ease;
+} */
+
+/* Hide navigation links by default on small screens */
+/* .navigation {
+    display: none;
+} */
+
+/* Show the hamburger icon and hide navigation on small screens */
+/* @media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .navigation {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--secondary-color);
+    }
+
+    .navigation.active {
+        display: flex; /* Show the menu when active */
+    /* } */
+/* } */
+
+/* Show navigation links normally on larger screens */
+/* @media (min-width: 769px) {
+    .hamburger {
+        display: none;
+    }
+
+    .navigation {
+        display: flex;
+    } */
+/* } */
 
 h2 {
     font-family: "Roboto", sans-serif;
     font-weight: 100;
     background-color: var(--primary-color);
-    color: var(--accent1-color)
+    color: white;
 }
 
 .templeHolder {
