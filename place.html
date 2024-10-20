@@ -18,19 +18,52 @@
     <header>
         <h1>WDD 131 - Dynamic Web Fundamentals - Spencer Schmid</h1>
         <nav>
-            <ul>
-                <li><a href="https://www.linkedin.com/in/spencer-schmid-00075b161/">Linkedin</a></li>
-                <li><a href="https://byui.instructure.com/">I-Learn</a></li>
-                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/34?lang=eng&id=16#p16">Favorite Scripture</a></li>
-                <li><a href="">Final Project</a></li>
-            </ul>
-        </nav>
-    </header>
+            <nav>
+                <a href="#" class="nav-branding">DEV.</a>
+                <!-- Hamburger Icon -->
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class ="navigation">
+                    <li class="nav-item"><a href="" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">Old</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">New</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">Large</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">Small</a></li>
+                </ul>
+            </nav>
+        </header>
 
     <main>
-        <section id="image-holder"><img id="spain-image" src="images/spain-landscape.webp"></section>
-        <section>data</section>
-        <section>weather</section>
+        <div id="container">
+            <picture id="image-holder">
+                <source media="(min-width:60rem)" srcset="images/spain-landscape.webp" alt="Spain" style="width:auto;">
+                <img id="spain-wall" src="images/spain-wall.avif" alt="Spain">
+            </picture>
+            <section id="data">
+                <h3>Data</h3>
+                <p>Area: 195,379 square miles</p>
+                <p>Population: 47.78 million</p>
+                <p>Capital: Madrid</p>
+                <p>Languages: Spanish</p>
+                <p>Currency: Euro</p>
+                <p>Time Zone: GMT +2</p>
+                <p>Calling Code: +34</p>
+                <p>Internet TLD: .es</p>
+            </section>
+            <section id="weather">
+                <div id="Weather_heading">
+                    <h3>Weather</h3>
+                    <img id="sun" src="images/sun_clouds.svg" alt="Sun and clouds" width="10%">
+                </div>
+                <p>Temperature: 16 C</p>
+                <p>Conditions: Cloudy</p>
+                <p>Wind: 2km/h</p>
+                <p>Wind Chill: <span id="calculateWindChill"></span></p>
+            </section>
+        </div>
     </main>
     <footer>
         <p>©️<span id="currentYear"></span> | Spencer Schmid | Idaho, United States</p>

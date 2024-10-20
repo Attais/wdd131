@@ -45,6 +45,22 @@ nav ul {
     justify-content: center;
 }
 
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.nav-branding {
+    font-size: 2rem;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
 nav a {
     display: block;
     color: var(--nav-link-color);
@@ -57,25 +73,119 @@ nav a:hover {
     text-decoration: overline;
 }
 
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+@media(max-width:60rem) {
+    .hamburger {
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity:0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .navigation{
+        position:fixed;
+        left: -100%;
+        top:70px;
+        z-index: 2  ;
+        gap: 0;
+        flex-direction: column;
+        background-color: var(--secondary-color);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-item{
+        margin: 16px 0;
+    }
+
+    .navigation.active{
+        left: 0;
+    }
+}
+
 body {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
 }
 
-#spain-image {
-    object-fit: contain;
+#container {
+    position: relative;
+    text-align: center;
 }
 
-#image-holder {
+#spain-wall {
+    object-fit: contain;
     width: 100%;
     height: auto;
 }
 
+#image-holder {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+/* #data {
+    color: black;
+    background-color: hsl(0, 0%, 100%);
+
+}
+
+#weather {
+    color: black;
+    background-color: hsl(0, 0%, 100%);
+
+} */
+
+@media(min-width: 60rem) {
+    #data {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        color: white;
+        background-color: hsla(0, 100%, 50%, 0.404);
+        padding: 10px;
+    }
+    
+    #weather {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        color: white;
+        background-color: hsla(0, 100%, 50%, 0.404);
+        padding: 10px;
+    }
+
+    #sun {
+        display: inline;
+    }
+
+    #Weather_heading{
+        display: flex;
+        justify-content: center;
+    }
+}
 h1 {
     font-family: "Roboto", sans-serif;
     font-weight: 100;
     background-color: var(--primary-color);
-    color: var(--accent1-color)
+    color: white
 }
 
 h2 {
