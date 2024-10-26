@@ -34,19 +34,20 @@
         </nav>
     </header>
     <main>
+        <h1>Form</h1>
         <div id="form-center">
         <form method="get" action="review.html" onsubmit="return submission()">
             <div class="form-object">
                 <!-- Product name, drop down box -->
                 <label for="selection">Product Name</label>
                 <select name="product" id="selection" required>
-                    <option disabled selected>Select a product ...</option>
+                    <option value="" disabled selected hidden>Select a product ...</option>
                 </select>
 
             </div>
             <div class="form-object">
-                <label for="rating">Review</label>
                 <div>
+                    <legend>Review</legend>
                     <input type="radio" id="one_star" name="rating" value="1">
                     <label for="one_star">One Star</label><br>
                     <input type="radio" id="two_star" name="rating" value="2">
@@ -67,9 +68,9 @@
             </div>
             <div class="form-object">
                 <!-- useful features, check boxes -->
-                 <label for="features">Useful Features</label>
                  <div>
                     <div>
+                    <legend>Useful Features</legend>
                     <input type="checkbox" name="feature" id="feature1">
                     <label for="feature1">Accessibility</label>
                     </div>
