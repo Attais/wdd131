@@ -103,21 +103,23 @@ const temples = [
       
   ];
 
-createTempleCard();
 
-function createTempleCard() {
-    temples.forEach(temple => {
-        let card = document.createElement("section");
-        let name = document.createElement("h3");
-        let location = document.createElement("p");
-        let dedication = document.createElement("p");
-        let area = document.createElement("p");
-        let img = document.createElement("img");
+  function createTempleCard(filteredTemples) {
+    const templeHolder = document.querySelector(".templeHolder");
+    templeHolder.innerHTML = ""; // Clear any existing temple cards
 
-        name.textContent = temple.templeName
-        location.innerHTML = `<span class ="label">Location:</span> ${temple.location}`;
-        dedication.innerHTML = `<span class ="label">Dedication:</span> ${temple.dedicated}`;
-        area.innerHTML = `<span class ="label">Size:</span> ${temple.area} sq ft`;
+    filteredTemples.forEach(temple => {
+        const card = document.createElement("section");
+        const name = document.createElement("h3");
+        const location = document.createElement("p");
+        const dedication = document.createElement("p");
+        const area = document.createElement("p");
+        const img = document.createElement("img");
+
+        name.textContent = temple.templeName;
+        location.innerHTML = `<span class="label">Location:</span> ${temple.location}`;
+        dedication.innerHTML = `<span class="label">Dedication:</span> ${temple.dedicated}`;
+        area.innerHTML = `<span class="label">Size:</span> ${temple.area} sq ft`;
         img.setAttribute("src", temple.imageUrl);
         img.setAttribute("alt", `${temple.templeName} Temple`);
         img.setAttribute("loading", "lazy");
@@ -128,6 +130,45 @@ function createTempleCard() {
         card.appendChild(area);
         card.appendChild(img);
 
-        document.querySelector(".templeHolder").appendChild(card);
-})
+        templeHolder.appendChild(card);
+    });
 }
+
+// Event listeners for the navigation links with filtering functions
+document.querySelector("#home").addEventListener("click", (e) => {
+    e.preventDefault();
+    createTempleCard(temples);
+});
+
+document.querySelector("#old").addEventListener("click", (e) => {
+    e.preventDefault();
+    const oldTemples = temples.filter(temple => {
+        const year = parseInt(temple.dedicated.split(",")[0].trim(), 10);
+        return year < 1900;
+    });
+    createTempleCard(oldTemples);
+});
+
+document.querySelector("#new").addEventListener("click", (e) => {
+    e.preventDefault();
+    const newTemples = temples.filter(temple => {
+        const year = parseInt(temple.dedicated.split(",")[0].trim(), 10);
+        return year > 2000;
+    });
+    createTempleCard(newTemples);
+});
+
+document.querySelector("#large").addEventListener("click", (e) => {
+    e.preventDefault();
+    const largeTemples = temples.filter(temple => temple.area > 90000);
+    createTempleCard(largeTemples);
+});
+
+document.querySelector("#small").addEventListener("click", (e) => {
+    e.preventDefault();
+    const smallTemples = temples.filter(temple => temple.area < 10000);
+    createTempleCard(smallTemples);
+});
+
+// Initial display of all temples
+createTempleCard(temples);
