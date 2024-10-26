@@ -3,19 +3,19 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <title>WDD 131 - Temple Album - Spencer Schmid</title>
+        <title>WDD 131 - Product Form - Spencer Schmid</title>
         <meta name="description" content="WDD 131 - Dynamic Web Fundamentals | Spencer Schmid | Index Page">
         <meta name="author" content="Spencer Schmid">
-        <link rel="stylesheet" href="styles/filtered-temples.css">
+        <link rel="stylesheet" href="styles/form.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
-        <script defer src="scripts/filtered-temples.js"></script>
+        <script defer src="scripts/form.js"></script>
     </head>
     <body>
 
     <header>
-        <h1>Temple</h1>
+        <h1></h1>
         <nav>
             
             <a href="#" class="nav-branding">DEV.</a>
@@ -35,8 +35,74 @@
         </nav>
     </header>
     <main>
-        <h2>Home</h2>
-        <div class="templeHolder">
+        <div id="form-center">
+        <form method="get"  onsubmit="return submission()">
+            <div class="form-object">
+                <!-- Product name, drop down box -->
+                <label for="product">Product Name</label>
+                <select name="product" id="selection" required>
+                    <option disabled selected>Select a product ...</option>
+                </select>
+
+            </div>
+            <div class="form-object">
+                <label for="rating">Review</label>
+                <div>
+                    <input type="radio" id="one_star" name="rating" value="1">
+                    <label for="one_star">One Star</label><br>
+                    <input type="radio" id="two_star" name="rating" value="2">
+                    <label for="rating">Two Star</label><br>
+                    <input type="radio" id="three_star" name="rating" value="3">
+                    <label for="rating">Three Star</label><br>
+                    <input type="radio" id="four_star" name="rating" value="4">
+                    <label for="rating">Four Star</label><br>
+                    <input type="radio" id="five_star" name="rating" value="5">
+                    <label for="rating">Five Star</label><br>
+
+                </div>
+            </div>
+            <div class="form-object">
+                <!-- date of installation (mm/dd/yyyy) -->
+                 <label for="date">Date of Installation</label>
+                 <input type="date" required name="date">
+            </div>
+            <div class="form-object">
+                <!-- useful features, check boxes -->
+                 <label for="features">Useful Features</label>
+                 <div>
+                    <div>
+                    <input type="checkbox" name="feature1">
+                    <label for="feature1">Accessibility</label>
+                    </div>
+                    <div>
+                    <input type="checkbox" name="feature2">
+                    <label for="feature2">Affordability</label>
+                    </div>
+                    <div>
+                    <input type="checkbox" name="feature3">
+                    <label for="feature3">Usability</label>
+                    </div>
+                    <div>
+                    <input type="checkbox" name="feature4">
+                    <label for="feature4">Explodability</label>
+                    </div>
+                 </div>
+            </div>
+            <div class="form-object">
+                <!-- writen review, text box -->
+                 <label for="writtenReview">Written Review</label>
+                 <input type="textbox" name="writtenReview" id="writtenReview">
+            </div>
+            <div class="form-object">
+                <!-- name textbox, optional -->
+                <label for="name">Enter your name: </label>
+                <input type="text" name="name" id="name">
+            </div>
+            <div class="form-object">
+                <!-- submit button -->
+                 <button>Submit</button>
+            </div>
+        </form>
         </div>
     </main>
     <footer>
