@@ -32,34 +32,12 @@ header, main {
     margin: 0 auto;
 }
 
-nav {
-    background-color: var(--secondary-color);
-    display: flex;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
 nav ul {
     list-style-type: none;
     display: flex;
     justify-content: center;
 }
 
-.navigation {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 60px;
-}
-
-.nav-branding {
-    font-size: 2rem;
-}
-
-.hamburger {
-    display: none;
-    cursor: pointer;
-}
 
 nav a {
     display: block;
@@ -83,41 +61,81 @@ nav a:hover {
     background-color: white;
 }
 
-@media(max-width:60rem) {
+.hamburger {
+    display: block;
+}
+
+.hamburger.active .bar:nth-child(2){
+    opacity:0;
+}
+
+.hamburger.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.navigation{
+    position:fixed;
+    left: -100%;
+    top:70px;
+    z-index: 2;
+    gap: 0;
+    flex-direction: column;
+    background-color: var(--secondary-color);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.nav-item{
+    margin: 16px 0;
+}
+
+.navigation.active{
+    left: 0;
+}
+
+.nav-branding {
+    font-size: 2rem;
+}
+
+nav {
+    background-color: var(--secondary-color);
+    display: flex;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+@media(min-width:60rem) {
     .hamburger {
-        display: block;
+        display: none;
+        cursor: pointer;
+    }    
+
+
+    .navigation {
+        display: flex;
+        position: static;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 60px;
     }
-    .hamburger.active .bar:nth-child(2){
-        opacity:0;
-    }
-    .hamburger.active .bar:nth-child(1){
-        transform: translateY(8px) rotate(45deg);
-    }
-    .hamburger.active .bar:nth-child(3){
-        transform: translateY(-8px) rotate(-45deg);
+    
+    .nav-branding {
+        font-size: 2rem;
     }
 
-    .navigation{
-        position:fixed;
-        left: -100%;
-        top:70px;
-        z-index: 2;
-        gap: 0;
-        flex-direction: column;
-        background-color: var(--secondary-color);
-        width: 100%;
-        text-align: center;
-        transition: 0.3s;
+    .templeHolder {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        max-width: 100%;
+        row-gap: 1rem;
+        column-gap: 1rem;
+        justify-items:  center;
     }
-
-    .nav-item{
-        margin: 16px 0;
-    }
-
-    .navigation.active{
-        left: 0;
-    }
-
 
 }
 
@@ -128,7 +146,6 @@ body {
 
 .templeHolder {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
     max-width: 100%;
     row-gap: 1rem;
     column-gap: 1rem;
