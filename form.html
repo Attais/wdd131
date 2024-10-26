@@ -15,7 +15,6 @@
     <body>
 
     <header>
-        <h1></h1>
         <nav>
             
             <a href="#" class="nav-branding">DEV.</a>
@@ -36,10 +35,10 @@
     </header>
     <main>
         <div id="form-center">
-        <form method="get"  onsubmit="return submission()">
+        <form method="get" action="review.html" onsubmit="return submission()">
             <div class="form-object">
                 <!-- Product name, drop down box -->
-                <label for="product">Product Name</label>
+                <label for="selection">Product Name</label>
                 <select name="product" id="selection" required>
                     <option disabled selected>Select a product ...</option>
                 </select>
@@ -51,39 +50,39 @@
                     <input type="radio" id="one_star" name="rating" value="1">
                     <label for="one_star">One Star</label><br>
                     <input type="radio" id="two_star" name="rating" value="2">
-                    <label for="rating">Two Star</label><br>
+                    <label for="two_star">Two Star</label><br>
                     <input type="radio" id="three_star" name="rating" value="3">
-                    <label for="rating">Three Star</label><br>
+                    <label for="three_star">Three Star</label><br>
                     <input type="radio" id="four_star" name="rating" value="4">
-                    <label for="rating">Four Star</label><br>
+                    <label for="four_star">Four Star</label><br>
                     <input type="radio" id="five_star" name="rating" value="5">
-                    <label for="rating">Five Star</label><br>
+                    <label for="five_star">Five Star</label><br>
 
                 </div>
             </div>
             <div class="form-object">
                 <!-- date of installation (mm/dd/yyyy) -->
                  <label for="date">Date of Installation</label>
-                 <input type="date" required name="date">
+                 <input type="date" id="date" required name="date">
             </div>
             <div class="form-object">
                 <!-- useful features, check boxes -->
                  <label for="features">Useful Features</label>
                  <div>
                     <div>
-                    <input type="checkbox" name="feature1">
+                    <input type="checkbox" name="feature" id="feature1">
                     <label for="feature1">Accessibility</label>
                     </div>
                     <div>
-                    <input type="checkbox" name="feature2">
+                    <input type="checkbox" name="feature" id="feature2">
                     <label for="feature2">Affordability</label>
                     </div>
                     <div>
-                    <input type="checkbox" name="feature3">
+                    <input type="checkbox" name="feature" id="feature3">
                     <label for="feature3">Usability</label>
                     </div>
                     <div>
-                    <input type="checkbox" name="feature4">
+                    <input type="checkbox" name="feature" id="feature4">
                     <label for="feature4">Explodability</label>
                     </div>
                  </div>
@@ -91,7 +90,7 @@
             <div class="form-object">
                 <!-- writen review, text box -->
                  <label for="writtenReview">Written Review</label>
-                 <input type="textbox" name="writtenReview" id="writtenReview">
+                 <input type="text" name="writtenReview" id="writtenReview">
             </div>
             <div class="form-object">
                 <!-- name textbox, optional -->
