@@ -67,6 +67,20 @@ footer {
     color: #333;
 }
 
+.hero {
+    position: relative;
+}
+
+#title {
+    position: absolute;
+    top: 20%;
+    right: 20%;
+    padding: 20px;
+    background-color: var(--accent2-color);
+    opacity: 80%;
+
+}
+
 /* Mobile view */
 @media (max-width: 600px) {
     .content {
@@ -83,6 +97,7 @@ footer {
     max-width: 450px;
     top:0;
     right:-450px;
+    z-index: 2;
 }
 
 .menu-overlay.active {
