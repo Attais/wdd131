@@ -68,7 +68,7 @@ nav {
 main {
     padding: 20px;
     background-color: var(--secondary-color);
-    list-style-position: inside
+    list-style-position: inside;
 }
 
 .content {
