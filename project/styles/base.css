@@ -106,10 +106,14 @@ footer {
 }
 
 /* Mobile view */
-@media (max-width: 600px) {
+@media (max-width: 60rem) {
     .content {
         padding: 15px;
+        margin-top: -20rem;
+        position: relative;
+        z-index: 3;
     }
+
 
 }
 
