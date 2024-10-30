@@ -68,6 +68,7 @@ nav {
 main {
     padding: 20px;
     background-color: var(--secondary-color);
+    list-style-position: inside
 }
 
 .content {
@@ -155,7 +156,7 @@ footer {
     height: 50px;
     width: 50px;
     margin-right:auto;
-    position: relative;
+    position: fixed;
     z-index: 1000;
 }
 
@@ -169,6 +170,12 @@ footer {
     transform: translate(-50%, -50%);
     transition: .3s ease;
     background-color: #6F86FF;
+    cursor: pointer;
+}
+
+.ham-menu cursor:hover {
+    border:2px red;
+    transition: .3s ease;
 }
 
 .ham-menu span:nth-child(1) {
