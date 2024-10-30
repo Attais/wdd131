@@ -1,45 +1,78 @@
 <!DOCTYPE html>
-<html lang="en-US">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <title>The Archives - Guides - M+ - Stonevault</title>
-        <meta name="description" content="Stonevault">
-        <meta name="author" content="Spencer Schmid">
-        <link rel="stylesheet" href="styles/form.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
-        <script defer src="scripts/form.js"></script>
-    </head>
-    <body>
-
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Archives - Stonevault</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <script defer src="scripts/base.js"></script>
+</head>
+<body>
     <header>
-        <nav>
-            
-            <a href="#" class="nav-branding">DEV.</a>
-            <!-- Hamburger Icon -->
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+        <div>
+            <div>
+                <span class="scroll-watcher"></span>
             </div>
-            <ul class ="navigation">
-                <li class="nav-item"><a href="" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="" class="nav-link">Old</a></li>
-                <li class="nav-item"><a href="" class="nav-link">New</a></li>
-                <li class="nav-item"><a href="" class="nav-link">Large</a></li>
-                <li class="nav-item"><a href="" class="nav-link">Small</a></li>
-            </ul>
+    
+        </div>
+        <nav>
+            <div class="ham-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div id="menu" class="menu-overlay">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="stonevault.html">Stonevault</a></li>
+                    <li><a href="mists.html">Mists</a></li>
+                </ul>
+            </div>
         </nav>
+        <div class="hero">
+            
+            <picture>
+            <img src="images/stonevault.jpg" alt="Hero Image">
+            </picture>
+        <div><h1 id="title">The<br>Archives</h1></div>
+        </div>
     </header>
     <main>
-        <h1>Form</h1>
-
+        <section class="content">
+            <section>
+                <h2 class="flow">The Stonevault</h2>
+                <p class="flow">For running a successful Mythic+ in <em>The Stonevault</em>, a dungeon in <em>World of Warcraft</em>'s War Within expansion, here are some key strategies:</p>
+                
+                <h3 class="flow">Dungeon Layout and General Tips</h3>
+                <p class="flow">The dungeon has a mix of technical trash mobs and four main bosses, each with unique mechanics that require group coordination. Affixes like Fortified or Tyrannical can increase the difficulty of specific abilities, so adjust accordingly.</p>
+                
+                <h3 class="flow">Boss Strategies</h3>
+                <ol>
+                    <li class="flow"><strong>E.D.N.A.</strong>  
+                        <p>Features abilities demanding positioning and teamwork. "Volatile Spikes" marks random players, creating damage zones. Healers should prepare for burst healing, especially during "Earth Shatterer," a high-damage AoE.</p>
+                    </li>
+                    <li class="flow"><strong>Skarmorak</strong>  
+                        <p>This boss releases "Crystal Shards" that trigger "Crystalline Eruption" when destroyed, causing explosions. Tanks should position Skarmorak to avoid crossfire, and DPS should handle eruptions strategically.</p>
+                    </li>
+                    <li class="flow"><strong>Master Machinists Brokk and Dorlita</strong>  
+                        <p>A duo fight with physical and magical damage. Focus on Brokk and interrupt Dorlita's casts to avoid group-wide damage. Positioning is crucial to manage AoE bursts from machinery.</p>
+                    </li>
+                    <li class="flow"><strong>High Speaker Eirich</strong>  
+                        <p>This boss has large AoE spells. Avoid stacking "Void Infection" by cleansing it regularly. Healers should prepare defensives for periodic heavy-damage phases.</p>
+                    </li>
+                </ol>
+                
+                <h3 class="flow">Trash Pulls</h3>
+                <p class="flow">Trash mobs include Void-touched enemies with hard-hitting attacks. Prioritize interrupting abilities like "Arcing Void" and "Howling Fear," and manage "Seismic Wave" from Earth Infused Golems carefully.</p>
+                
+                <p class="flow">For an in-depth guide on routes and affix strategies, visit resources like <a href="https://www.icy-veins.com">Icy Veins</a> and <a href="https://keystone.guru">Keystone.guru</a>.</p>
+            </section>
+        </section>
     </main>
     <footer>
-        <p>©️<span id="currentYear"></span> | Spencer Schmid | Idaho, United States</p>
-        <p><span id="lastModified"></span></p>
+        <p>Footer: Spencer Schmid - Copyright <span id="currentYear"></span></p>
+        <p><a href="https://www.figma.com/design/sA8mtXYmiCBXjD8tMkddDH/Untitled?node-id=1-56&node-type=frame&t=pc8QPQfHo8xZhhq0-0">Wireframe</a></p>
+        <p>Last modified: <span id="lastModified"></span></p>
     </footer>
-    </body>
+</body>
 </html>

@@ -17,14 +17,34 @@ Text - #04A777 - Jade
     --nav-hover-background-color: #087F8C;
 }
 
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+.scroll-watcher {
+    height: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: var(--accent1-color);
+    width: 100%;
+    width: 0;
+    animation: scroll-watcher linear;
+    animation-timeline: scroll();
+}
+
+@keyframes scroll-watcher {
+    to { width: 100%}
+}
+
 body {
     font-family: Arial, sans-serif;
+    background-color: var(--accent1-color)
 }
 
 header {
@@ -47,7 +67,7 @@ nav {
 
 main {
     padding: 20px;
-    background-color: #f5f5f5;
+    background-color: var(--secondary-color);
 }
 
 .content {
@@ -57,6 +77,10 @@ main {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.flow{
+    padding: 10px
 }
 
 footer {
@@ -86,6 +110,7 @@ footer {
     .content {
         padding: 15px;
     }
+
 }
 
 
@@ -162,4 +187,8 @@ footer {
 
 .ham-menu.active span:nth-child(2) {
     opacity: 0;
+}
+
+footer a{
+    color: black;
 }

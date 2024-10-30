@@ -1,45 +1,110 @@
 <!DOCTYPE html>
-<html lang="en-US">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <title>The Archives - Guides - M+ - Mists</title>
-        <meta name="description" content="Mists">
-        <meta name="author" content="Spencer Schmid">
-        <link rel="stylesheet" href="styles/form.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
-        <script defer src="scripts/form.js"></script>
-    </head>
-    <body>
-
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Archives - Mists</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <script defer src="scripts/base.js"></script>
+</head>
+<body>
     <header>
+        <div>
+            <span class="scroll-watcher"></span>
+        </div>
         <nav>
-            
-            <a href="#" class="nav-branding">DEV.</a>
-            <!-- Hamburger Icon -->
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+            <div class="ham-menu">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-            <ul class ="navigation">
-                <li class="nav-item"><a href="" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="" class="nav-link">Old</a></li>
-                <li class="nav-item"><a href="" class="nav-link">New</a></li>
-                <li class="nav-item"><a href="" class="nav-link">Large</a></li>
-                <li class="nav-item"><a href="" class="nav-link">Small</a></li>
-            </ul>
+            <div id="menu" class="menu-overlay">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="stonevault.html">Stonevault</a></li>
+                    <li><a href="mists.html">Mists</a></li>
+                </ul>
+            </div>
         </nav>
+        <div class="hero">
+            
+            <picture>
+            <img src="images/mists.webp" alt="Hero Image">
+            </picture>
+        <div><h1 id="title">The<br>Archives</h1></div>
+        </div>
     </header>
     <main>
-        <h1>Form</h1>
-        
+        <section class="content">
+            <h2 class="flow">Mists of Tirna Scithe</h2>
+            <section class="flow">
+                <h2>Dungeon Overview</h2>
+                <p><strong>Location:</strong> Ardenweald, within the heart of the Night Fae's magical forest, Mists of Tirna Scithe is renowned for its maze-like layout and heavy reliance on mechanics over raw DPS checks. This dungeon emphasizes crowd control, careful interrupt management, and close attention to positioning.</p>
+                <p><strong>Affixes:</strong> Mists of Tirna Scithe is especially challenging with affixes like Spiteful or Sanguine, due to its small rooms and dense trash packs. Bolstering can be particularly tricky here due to varied mob health in packs, so targeting priorities are crucial.</p>
+            </section>
+    
+            <section class="flow">
+                <h2>Route and Navigation</h2>
+                <p>Navigating Mists of Tirna Scithe requires passing through multiple "mazes" and choosing the correct path at certain junctions. Key tips for efficient routing:</p>
+                <ul>
+                    <li><strong>Maze Navigation:</strong> Always follow the symbols on the ground as clues. Only one symbol at each junction will match the symbol at the end of the path—take this path to avoid dead-ends.</li>
+                    <li><strong>Stealth Options:</strong> Consider bringing classes with stealth or invisibility, as this can reduce the number of packs pulled and increase time efficiency.</li>
+                </ul>
+            </section>
+    
+            <section class="flow">
+                <h2>Boss Guide</h2>
+    
+                <h3>Ingra Maloch</h3>
+                <ul>
+                    <li><strong>Phase 1 (Tirnenn Villager):</strong> The boss starts empowered, dealing significant damage while draining his energy. Avoid Dark Lotus (which applies a stacking DoT) and Embrace Darkness by spreading out to prevent excessive damage on the party.</li>
+                    <li><strong>Droman Oulfarran (Tree Guardian):</strong> When Maloch drains energy, he will be shielded by Droman. Interrupt Burst of Knowledge and switch to Droman to break the shield. Avoid Repulsive Visage (a fear effect).</li>
+                </ul>
+                <p><em>Tip:</em> Coordinate DPS to switch between Maloch and Droman efficiently, minimizing downtime.</p>
+    
+                <h3>Mistcaller</h3>
+                <ul>
+                    <li><strong>Guessing Game:</strong> Mistcaller will periodically summon Illusionary Clones. Attack the one symbol that does not match the others to reveal the real Mistcaller.</li>
+                    <li><strong>Dodge Fox’s Attacks:</strong> Watch for the Pattycake ability, which should be interrupted to prevent stuns. Freeze Tag is a freezing ability that needs to be avoided by moving away.</li>
+                </ul>
+                <p><em>Tip:</em> Strong interrupts and fast reactions make this fight much easier, as Mistcaller has minimal health but requires high mechanic execution.</p>
+    
+                <h3>Tred’ova</h3>
+                <ul>
+                    <li><strong>Parasites and Explosions:</strong> Tred'ova casts Infectious Rain, a heavy AoE DoT that healers should prioritize dispelling. Mind Link tethers players together—move quickly to break the tether.</li>
+                    <li><strong>Acidic Discharge:</strong> Avoid pools dropped on the ground to prevent excessive raid-wide damage. Spread out to minimize overlap.</li>
+                </ul>
+                <p><em>Tip:</em> Use Bloodlust/Heroism on this boss, as it has the most intense mechanics of the dungeon. High mobility and quick movement break the tethers effectively.</p>
+            </section>
+    
+            <section class="flow">
+                <h2>Trash Mobs and Priority Targets</h2>
+                <h3>Key Mobs</h3>
+                <ul>
+                    <li><strong>Drust Soulcleavers:</strong> Casts Soul Split, which deals massive tank damage and should be interrupted. Stack stuns or silences as needed.</li>
+                    <li><strong>Mistveil Stalkers:</strong> Their Lunge ability deals heavy frontal damage. Avoid standing in front of these mobs.</li>
+                    <li><strong>Mistveil Matriarchs:</strong> Dangerous due to Brambles, which traps players. Handle with crowd control to mitigate spread damage.</li>
+                </ul>
+            </section>
+    
+            <section class="flow">
+                <h2>Tips for Success</h2>
+                <ul>
+                    <li><strong>Class Selection:</strong> Classes with mobility, crowd control, and defensive cooldowns perform best. Hybrid classes can help with off-healing and dispels, especially for Infectious Rain.</li>
+                    <li><strong>Healing:</strong> Infectious Rain from Tred’ova is a high DoT priority, and the healing requirement here is intense. Classes with strong AoE dispels (like Restoration Druids and Holy Priests) excel.</li>
+                    <li><strong>Minimize Movement in Maze Rooms:</strong> Sticking close together in maze sections reduces accidental pulls. Be mindful of patrols while navigating.</li>
+                </ul>
+            </section>
+
+            <section class="flow">
+                <p>Good luck</p>
+            </section>
+        </section>
     </main>
     <footer>
-        <p>©️<span id="currentYear"></span> | Spencer Schmid | Idaho, United States</p>
-        <p><span id="lastModified"></span></p>
+        <p>Footer: Spencer Schmid - Copyright <span id="currentYear"></span></p>
+        <p><a href="https://www.figma.com/design/sA8mtXYmiCBXjD8tMkddDH/Untitled?node-id=1-56&node-type=frame&t=pc8QPQfHo8xZhhq0-0">Wireframe</a></p>
+        <p>Last modified: <span id="lastModified"></span></p>
     </footer>
-    </body>
+</body>
 </html>
